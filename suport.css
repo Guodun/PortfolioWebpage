@@ -1,0 +1,233 @@
+/*全局设置*/
+body{
+    font-size: 16px;
+    line-height: 1.5em;
+    font-family: 'Quattrocento Sans', sans-serif;
+}
+h1, h2, h3, h4, h5, h6{
+    font-family: 'Montserrat', serif;
+    font-weight: 700;
+    color: #1a1a1a;
+}
+.content-section h1{
+    font-size: 38px;
+    color: #9C9C9C;
+    font-weight: 400;
+    display: inline-block;
+}
+.content-section h1:after{
+    content: "";
+    display: block;
+    border-bottom: 1px solid #DFDFDF;
+    padding-top: 10px;
+}
+.content-section p.lead{
+     font-family: 'Cardo', serif;
+     font-size: 19px;
+     margin-bottom: 25px;
+ }
+
+/*NAVIGATION*/
+.navbar-default{
+    background-color: rgb(255,255,255);
+    font-family: 'Montserrat';
+    transition: all 0.35s;
+}
+.navbar-header{
+    width: 100%;
+    font-weight: 700;
+}
+.navbar-header .navbar-brand{
+    font-size: 36px;
+    letter-spacing: -1px;
+    color: #111;
+}
+.navbar-header .navbar-brand:hover{
+    color: rgb(230,75,54) !important;
+}
+.navbar-default .navbar-nav>li>a{
+    color: #111111 ;
+    font-size: 16px;
+    padding:0 20px 9px 0 ;
+}
+.navbar-default .navbar-nav>li>a:hover{
+    color: rgb(230,75,54);
+}
+.title-position{
+    margin-top: 50px;
+}
+
+@media screen and (min-width: 768px){
+    .navbar-header .navbar-brand{
+        font-size: 42px;
+        margin: 20px 0 10px;
+    }
+}
+
+@media screen and (min-width: 992px){
+    .navbar-header .navbar-brand{
+        font-size: 48px;
+        margin-top: 20px;
+    }
+}
+
+ /*HOME*/
+.content-section{
+    width:100%;
+    margin: 0 auto;
+    min-height: 100vh;
+    padding: 140px 0px 20px;
+}
+#home{
+    background: url('http://s17.postimg.org/m4bfqfgn3/fog_1005445_1920.jpg') no-repeat center fixed;
+    background-size: cover;
+    color: #111111;
+    text-shadow: 1px 1px 0 rgba(225,225,225,0.5);
+}
+#home h1{
+    font-size: 96px ;
+    line-height: 130px;
+    color: #111111;
+    font-family: 'Advent Pro', sans-serif;
+}
+#home h5{
+    color: #555;
+    font-size: 16px;
+}
+
+@media screen and (min-width: 768px){
+    #home h5{
+        font-size: 19px;
+    }
+    #home h1{
+        font-size: 120px;
+    }
+}
+
+@media screen and (min-width: 992px){
+    #home h5{
+        font-size: 21px;
+    }
+    #home h1{
+        font-size: 132px;
+    }
+}
+@media screen and (min-width: 1200px){
+    #home h5{
+        font-size: 24px;
+    }
+    #home h1{
+        font-size: 142px;
+    }
+}
+
+/*PORTFOLIO*/
+div.thumbnail{
+    position: relative;
+    left: 0;
+    top:0;
+}
+.content-section .thumbnail:after{
+    content: '\f121';
+    font-family: FontAwesome;
+    font-size: 40px;
+    text-align: center;
+    color: white;
+    line-height: 80px;
+    width: 86px;
+    height: 86px;
+    background-color: #AF6204;
+    position: absolute;
+    left: 38%;
+    top:72%;
+    transition: all 0.5s;
+    border-radius: 50%;
+    border: 3px solid white;
+    padding: 0 auto;
+    opacity: 0;
+}
+div.thumbnail:hover:after{
+    display: block;
+    left: 38%;
+    top:24%;
+    opacity: 1;
+    z-index: 10;
+}
+div.thumbnail:hover, div.thumbnail:hover p, div.thumbnail:hover h4{
+    color: rgb(175,175,175);
+}
+div.thumbnail:hover img{
+    opacity: 0.25;
+}
+
+@media screen and (min-width: 550px){
+    .content-section div.thumbnail:after{
+        left: 43% ;
+    }
+    .content-section div.thumbnail:hover:after{
+        top: 40% ;
+    }
+}
+@media screen and (min-width: 970px){
+    .content-section div.thumbnail:after{
+        left: 38% ;
+    }
+    .content-section div.thumbnail:hover:after{
+        top: 24% ;
+    }
+}
+
+/*CONTACT*/
+#contact{
+    background: no-repeat url(http://s18.postimg.org/z7eckrogp/seagulls_984529_1920.jpg) center fixed;
+    background-size: cover;
+}
+.btn-default{
+    border-radius: 0;
+    width: 180px;
+    margin-right: 5px;
+    margin-bottom: 10px;
+    position: relative;
+    border: hidden;
+}
+a.btn-default:after{
+    content: '';
+    width: 44px;
+    height: 44px;
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: all 0.35s;
+}
+a.btn-default i{
+    position: relative;
+    float: left;
+    z-index: 1;
+    font-size: 24px;
+    left: -4px;
+    right: 0;
+    color: white;
+}
+a.btn-default span{
+    position: relative;
+    z-index: 2;
+}
+a.linked-btn:after{
+    background-color: #0077B5;
+}
+a.twitter-btn:after{
+    background-color: #55ACEE;
+}
+a.github-btn:after{
+    background-color: #171515;
+}
+a.freecodecamp-btn:after{
+    background-color: #4B2B0D;
+}
+.btn-default:hover:after{
+    width: 100%;
+}
+.btn-default:hover{
+    color: white;
+}
